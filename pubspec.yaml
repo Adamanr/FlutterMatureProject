@@ -1,0 +1,20 @@
+name: matule2026
+publish_to: none
+environment:
+  sdk: ^3.9.0
+
+melos:
+  scripts:
+    generate:
+      run: melos exec -c 1 --depends-on build_runner -- dart run build_runner build
+
+workspace:
+  - packages/data
+  - packages/ui_kit
+  - packages/domain
+  - packages/network
+  - packages/storybook
+
+dev_dependencies:
+  melos: ^7.3.0
+

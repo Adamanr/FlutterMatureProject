@@ -1,0 +1,19 @@
+name: matule2026
+
+packages:
+  - app
+  - packages/**
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+    copyAssets: true
+
+scripts:
+  clean-all:
+    run: |
+      flutter clean && melos clean
+  run-app:
+    run: melos exec -c 1 --dir=app flutter run
+  storybook:
+    run: melos exec -c 1 --dir=packages/storybook flutter run
