@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/app_colors.dart';
 import 'package:ui_kit/theme/app_text_styles.dart';
 
+import '../main/main_shell.dart';
+
 class CreatePinPasswordScreen extends StatefulWidget {
   final VoidCallback onSuccess;
   const CreatePinPasswordScreen({super.key, required this.onSuccess});
@@ -20,7 +22,10 @@ class _CreatePinPasswordScreenState extends State<CreatePinPasswordScreen> {
       if (pin.length == 4) {
         Future.delayed(const Duration(milliseconds: 300), () {
           if (pin == correctPin) {
-            widget.onSuccess();
+            Navigator.of(context).pushAndRemoveUntil(
+              MaterialPageRoute(builder: (_) => const MainShell()),
+                  (route) => false,
+            );
           } else {
             setState(() => pin = '');
             ScaffoldMessenger.of(context).showSnackBar(

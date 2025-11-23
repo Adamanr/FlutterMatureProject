@@ -46,15 +46,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 keyboardType: TextInputType.emailAddress,
               ),
 
+              const SizedBox(height: 20),
+
               const AppTextField(
                 hint: "Отчество",
                 keyboardType: TextInputType.emailAddress,
               ),
 
+              const SizedBox(height: 20),
+
               const AppTextField(
                 hint: "Фамилия",
                 keyboardType: TextInputType.emailAddress,
               ),
+
+              const SizedBox(height: 20),
 
               const AppTextField(
                 hint: "Дата рождения",
@@ -72,6 +78,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 onChanged: (val) => setState(() => selectedCity = val),
               ),
 
+              const SizedBox(height: 20),
+
               const AppTextField(
                 hint: "Почта",
                 keyboardType: TextInputType.emailAddress,
@@ -85,7 +93,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 child: AppButton(
                   text: 'Далее',
                   onPressed: () {
-                    Navigator.of(context).pushReplacementNamed('/create_pass');
+                    Navigator.of(context).pushReplacementNamed('/create_password');
                   },
                 ),
               ),

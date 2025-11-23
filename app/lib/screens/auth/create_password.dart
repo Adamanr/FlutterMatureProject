@@ -56,7 +56,7 @@ class _CreatePasswordState extends State<CreatePasswordScreen> {
                 child: AppButton(
                   text: 'Сохранить',
                   onPressed: () {
-                    Navigator.of(context).pushReplacementNamed('/profile');
+                    Navigator.of(context).pushReplacementNamed('/create_pin');
                   },
                 ),
               ),
